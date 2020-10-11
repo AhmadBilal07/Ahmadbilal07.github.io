@@ -1,0 +1,326 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #1c1c1c;
+
+}
+
+.randChar {
+	color: white;
+	font-size: 0.8em;
+	height: 7.5px;
+	display: inline-block;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+}
+
+#ranDiv {
+	border-left: 2px solid white;
+	display: inline-block;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}
+
+.check {
+	background: -webkit-linear-gradient(#ffcc66 0%, #ff9999 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 2em;
+}
+
+#check:hover:before {
+	content: attr(data-active);
+
+}
+
+#check:hover span {
+	display: none;
+}
+
+#container {
+	display: flex;
+	color: white;
+	flex-direction: row;
+	flex-flow: row wrap;
+	align-items: stretch;
+}
+
+.item0 {
+	position: absolute;
+	top: 10px;
+	left: 35px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 2em;
+}
+
+.item1 {
+	padding-left: 12%;
+}
+
+.item2 {
+	flex: 2;
+	padding-top: 10%;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.item3 {
+	padding-right: 150px;
+}
+
+.item4 {
+	flex: 1 100%;
+}
+
+.item1,
+.item3 {
+	text-align: center;
+	height: 100vh;
+	font-size: 35vw;
+	font-weight: 100;
+	font-family: 'Montez', cursive;
+	flex: 1;
+}
+
+div.random {
+	position: absolute;
+	bottom: 37%;
+	left: 0;
+	margin-left: 0.5%;
+}
+
+.logoHolder {
+	position: absolute;
+	bottom: 15px;
+	right: 0;
+	height: 20px;
+	margin-right: 10px;
+	text-align: right;
+}
+
+#twitterLogo {
+	width: 05%;
+	height: auto;
+}
+
+.anchorTwitter {
+	border-radius: 100%;
+}
+
+.anchorTwitter:hover {
+	background: gray;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+/* a.next:hover,span.parameter:hover {
+	text-decoration:underline;
+} */
+.parameter,
+#comma {
+	font-size: 0.5em;
+	vertical-align: middle;
+}
+
+.comment {
+	font-size: 0.7em;
+	vertical-align: middle;
+	color: #6A9246;
+}
+
+div#next {
+	display: none;
+}
+
+#typerDiv {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	vertical-align: middle;
+}
+
+#firstLine {
+	font-size: 1.65em;
+	padding: 5px;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+#secondLine,
+#thirdLine {
+	font-size: 1.35em;
+	padding: 5px;
+
+}
+
+#fourthLine {
+	font-size: 1em;
+	padding-top: 4%;
+}
+
+#fifthLine {
+	font-size: 1em;
+	padding-top: 1%;
+}
+
+.link {
+	position: relative;
+	transition: -webkit-clip-path 275ms ease;
+	transition: clip-path 275ms ease;
+	transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+.link:hover span::before,
+.link:focus span::before {
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.link span {
+	position: relative;
+	display: inline-block;
+}
+
+.link span::before {
+	position: absolute;
+	content: attr(data-content);
+
+	text-decoration: underline;
+	-webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+	clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+	transition: -webkit-clip-path 275ms ease;
+	transition: clip-path 275ms ease;
+	transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+
+@media screen and (max-width: 992px) {
+	.item0 {
+		padding-top: 2%;
+	}
+	#typerDiv{
+		font-size: initial
+	}
+	.item1 {
+		padding-left: 5%;
+		padding-top: 5%;
+		font-size: 70vw;
+	}
+
+	.item2 {
+		padding-top: 25%;
+	}
+
+	.item3 {
+		padding-right: 5%;
+		padding-top: 5%;
+		font-size: 70vw;
+	}
+
+	#firstLine {
+		font-size: 2em;
+		padding: 2px;
+		margin-bottom: 1%;
+		text-align: center;
+	}
+	#secondLine {
+		margin-top: 20%;
+	}
+	#secondLine,
+	#thirdLine {
+		font-size: 1.5em;
+		padding: 5px;
+
+	}
+
+	#fourthLine {
+		font-size: 1em;
+		padding-top: 4%;
+	}
+
+	#fifthLine {
+		font-size: 1em;
+		padding-top: 1%;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+
+	.item1,
+	.item3 {
+		font-size: 70vw;
+	}
+
+	#firstLine {
+		font-size: 1.5em;
+	}
+
+	.item2 {
+		padding-top: 30%;
+	}
+
+	#secondLine,
+	#thirdLine {
+		font-size: 1em;
+	}
+
+	#fourthLine,
+	#fifthLine {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	#firstLine {
+		font-size: 1.3em;
+		padding: 2px;
+		margin-bottom: 1%;
+		text-align: center;
+	}
+	#secondLine {
+		margin-top: 10%;
+	}
+	#secondLine,
+	#thirdLine {
+		font-size: 0.9em;
+		padding: 5px;
+
+	}
+
+	#fourthLine,
+	#fifthLine {
+		font-size: 0.8em;
+	}
+
+	.item0 {
+		padding-top: 10%;
+	}
+
+	.item1 {
+		padding-left: 5%;
+		font-size: 80vw;
+		padding-top: 20%;
+
+	}
+
+	.item2 {
+		padding-top: 40%;
+	}
+
+	.item3 {
+		padding-right: 5%;
+		font-size: 80vw;
+		padding-top: 20%;
+	}
+}
