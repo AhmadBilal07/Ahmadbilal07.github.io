@@ -72,7 +72,7 @@ $(document).ready(() => {
   setTimeout(()=>{
     typeWriter("fifthLine",tags2,m);
     $('#next').show();
-  },2300) 
+  },2400) 
 
 
 });
